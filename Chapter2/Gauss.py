@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
-
-
-# In[2]:
-
 
 def Gauss(n, A):
     X = np.zeros(n,dtype=float)
@@ -37,10 +27,6 @@ def Gauss(n, A):
                 A[L[i]][j] = A[L[i]][j] - (xmult*A[L[k]][j])
     return X,A,L
 
-
-# In[3]:
-
-
 def Solve(n,A,L,B,X):
     for k in range(0, n-1):
         for i in range(k+1, n):
@@ -53,18 +39,10 @@ def Solve(n,A,L,B,X):
         X[i] = sum1/A[L[i]][i]
     return X
 
-
-# In[4]:
-
-
 def FullGauss(n,A,B):
     X,A,L = Gauss(n, A)
     X = Solve(n,A,L,B,X)
     return X
-
-
-# In[5]:
-
 
 #Example
 A = np.array([[3.0, 4, 3],
