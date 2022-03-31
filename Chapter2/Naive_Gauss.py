@@ -1,16 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-#Naive_Gauss Pseudocode copied
 import numpy as np
 import sys
-
-
-# In[2]:
-
 
 #Naive_Gauss Pseudocode For Python
 def Naive_Gauss(A, B):
@@ -27,10 +16,7 @@ def Naive_Gauss(A, B):
         B[k] = (B[k] - np.dot(A[k,k+1:n],B[k+1:n]))/A[k,k]
     return B
 
-
-# In[3]:
-
-
+#Example
 A = np.array([[2, 1, 1],
               [-1, 1, -1],
               [1, 2, 3]], dtype = float)
@@ -40,10 +26,7 @@ X = Naive_Gauss(A, B)
 print(X)
 #answer [3,1,-5]
 
-
-# In[4]:
-
-
+#Example 2
 A = np.array([[2, 1, 1, 2],
               [-1, 1, -1, 3],
               [1, 2, 3, -10]], dtype = float)
@@ -52,10 +35,7 @@ cols = np.shape(A)[1]
 print(rows)
 print(cols)
 
-
-# In[9]:
-
-
+#Example 3
 m = 10
 #A = np.array(zeros_like)
 #B = np.array(zeros_like)
@@ -72,10 +52,7 @@ print("\n",A,"\n",B)
 X = Naive_Gauss(A,B)
 print("\n",X)
 
-
-# In[10]:
-
-
+#Example 4
 A = np.array([[1.0, 0, 3],
               [0, 1, -3],
               [3, -3, 0],
@@ -86,10 +63,3 @@ print(B, "\n")
 
 X = Naive_Gauss(A,B)
 print(X,"\n")
-
-
-# In[ ]:
-
-
-
-
